@@ -56,11 +56,11 @@ Having a separate class for each command provides several advantages, many of wh
 
 Tangentially, the advantage of Python over Java (other than, you know, all of them) with a structure like this is that we can define separate but related classes (like the get/set commands for a particular database field like PB or playstyle)  in the same file.
 
-When all of this comes together, we end with a relatively seemless proccess for adding new commands to the bot. Create a new class - in a new file, when appropriate - complete with a decorator and an execute function.
+When all of this comes together, we end with a relatively seamless proccess for adding new commands to the bot. Create a new class - in a new file, when appropriate - complete with a decorator and an execute function.
 
 ## The Database
 
-With the command infrastructure in place, there was only one more major step before we could dive into feature d evelopment: the database. The former bot, because it was thrown together, because it had a small-ish userbase, and because Node.js ORM options are lacking, the original bot didn't use a database - it simply read and wrote JSON files that stored people's PBs or wins/losses. In programmers' circles, we call that "stupid." It did the j ob, but it didn't do it well, and it certainly wasn't sustainable.
+With the command infrastructure in place, there was only one more major step before we could dive into feature development: the database. The former bot, because it was thrown together, because it had a small-ish userbase, and because Node.js ORM options are lacking, the original bot didn't use a database - it simply read and wrote JSON files that stored people's PBs or wins/losses. In programmers' circles, we call that "stupid." It did the job, but it didn't do it well, and it certainly wasn't sustainable.
 
 In the spirit of scalability, in construction of our new bot we decided to use a relational database. You know, properly. The advantage of using Django is that we have access to not only a decent [object-relational mapping tool (ORM)](https://en.wikipedia.org/wiki/Object-relational_mapping), but also a [migration](https://en.wikipedia.org/wiki/Schema_migration) management tool. Briefly, an **ORM** allows us to make database queries without writing raw SQL, and migrations are what allow us to change the structure of our database in a safe and systematic manner while maintaining identical database structures in all our development environments.
 

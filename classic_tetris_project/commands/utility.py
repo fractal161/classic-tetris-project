@@ -68,7 +68,9 @@ class SeedGenerationCommand(Command):
         seed = 0
         while (seed % 0x100 < 0x3):
             seed = random.randint(0x200, 0xffffff)
-        self.send_message(("RANDOM SEED: [%06x]" % seed))
+        seed = f"{seed:06X}"
+        seed = ' '.join(a+b for a,b in zip(seed[::2], seed[1::2]))
+        self.send_message(("RANDOM SEED: [%s]" % seed))
 
 
 @Command.register("coin", "flip", "coinflip", usage="flip")

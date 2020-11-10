@@ -68,7 +68,8 @@ From within the project's root directory (`classic-tetris-project`), run the fol
 pip install -r requirements.txt
 ```
 
-This will install the 
+This will install the necessary prerequisites for the bot.
+
 We're almost done! We just have two more steps. Right now, there's still no database at all (or, if you took the optional steps, the database is empty). Thankfullly, with SQLite, there's no setup involved, because Django will automatically create a database upon the first migration if one doesn't exist already. Still within the project's root directory, run this:
 
 ```bash
@@ -99,9 +100,9 @@ Next, head to the OAuth tab on the left, and check the permission boxes exactly 
 
 ![Bot Permissions](https://github.com/professor-l/classic-tetris-project/blob/master/docs/img/permissions.png)
 
-Then, copy the URL given at the bottom of the OAuth permissions box (the first one) and save it sommewhere (only briefly - you can just paste it in a new tab if you want).  Finally, back on the Discord app, create a [new server](https://support.discordapp.com/hc/support/en-us/articles/204849977-How-do-I-create-a-server-) to use as your testing server. 
+Then, copy the URL given at the bottom of the OAuth permissions box (the first one) and save it somewhere (only briefly - you can just paste it in a new tab if you want).  Finally, back on the Discord app, create a [new server](https://support.discordapp.com/hc/support/en-us/articles/204849977-How-do-I-create-a-server-) to use as your testing server. 
 
-Head back to that URL you just saved, and enter it into your browser. When asked which server(s) you want to add the bot to, select the new one you just made, and click "Continue" followed by "Authorize". You may have to convince them that you're not a robot, but hopefully you're not a robot, in which case that shouldn't be an issue. If it is... talk to me, and we may be able to work somethiing out.
+Head back to that URL you just saved, and enter it into your browser. When asked which server(s) you want to add the bot to, select the new one you just made, and click "Continue" followed by "Authorize". You may have to convince them that you're not a robot, but hopefully you're not a robot, in which case that shouldn't be an issue. If it is... talk to me, and we may be able to work something out.
 
 One last step on Discord - go into your settings in Discord itself, head into the "Appearance" section, and **enable developer mode**. This will allow you to copy IDs and other things that will be useful for you as a - wait for it - *developer*. Once that's done and you've saved your changes, you're set!
 
